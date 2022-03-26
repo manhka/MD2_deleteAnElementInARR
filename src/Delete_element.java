@@ -30,13 +30,18 @@ public class Delete_element {
         int number = sc.nextInt();
         int positionToDelete = findPosition(arr, number);
         if (positionToDelete == -1) {
-            System.out.println("we don't have this element in this arr");
+            System.out.println("we don't have this element in this arr, please enter an other number");
+            return;
         } else {
             arr = DeleteAnElement(arr, positionToDelete);
         }
         System.out.print("ARRAY AFTER REMOVE AN ELEMENT: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.print(arr[i] + " ");
+//        }
+        for (int element:arr
+             ) {
+            System.out.print(element+", ");
         }
     }
 }
